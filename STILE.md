@@ -18,8 +18,9 @@ summary: Una frase di sintesi che compare nelle anteprime.
 
 Il Vangelo è quello del lezionario della Chiesa cattolica di rito romano (Italia). Verificare sempre con una ricerca web il brano del giorno e la celebrazione (feste e solennità sostituiscono la feria). Indicare anche la prima lettura nell'ultima sezione.
 
-## Struttura (600-800 parole)
+## Struttura (600-800 parole, più il testo)
 
+0. **Il testo** — subito dopo l'intestazione, una sezione `## Il testo` con il brano evangelico intero in blockquote, **tradotto dal greco dall'autore stesso** (traduzione propria, letterale dove possibile, in italiano sobrio). Non copiare la CEI né altre traduzioni moderne: sono protette da diritto d'autore. Chiudere il blocco con la riga `> <small>Dal Vangelo secondo X (riferimento). Traduzione dal greco a cura del sito, letterale dove possibile.</small>`.
 1. **Il contesto** — dove siamo nel Vangelo, cosa è appena successo, chi sono gli interlocutori.
 2. **Una o due sezioni sul testo** — titolate con un'immagine o una parola chiave del brano. Almeno un termine greco traslitterato (e in caratteri greci tra parentesi) spiegato con cura; riferimenti all'Antico Testamento dove illuminano.
 3. **I Padri** — una o due letture patristiche (Ambrogio, Agostino, Crisostomo, Cirillo, Beda, Gregorio Magno, Origene…), in parafrasi, senza citazioni lunghe.

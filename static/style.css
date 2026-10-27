@@ -73,6 +73,9 @@ h3 { font-family: var(--display); font-size: 1.35rem; margin: .3rem 0 .3rem; fon
   border-left: 3px solid var(--gold); font-style: italic; color: var(--muted);
 }
 .post blockquote p { margin: .3rem 0; }
+.post h2 + blockquote { font-style: normal; color: var(--ink); background: var(--accent-soft); border-left-color: var(--accent); padding: 1rem 1.2rem; border-radius: 0 4px 4px 0; }
+.post h2 + blockquote p { margin: 0 0 .7rem; }
+.post h2 + blockquote small { color: var(--muted); font-size: .8rem; font-style: italic; }
 .post .greek, .post em.gr { font-style: normal; font-family: "Source Serif 4", "Noto Serif", serif; }
 .post .footnote { font-size: .85rem; color: var(--muted); border-top: 1px solid var(--line); margin-top: 2rem; padding-top: 1rem; }
 .post .footnote ol { padding-left: 1.2rem; }
