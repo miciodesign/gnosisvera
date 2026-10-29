@@ -146,6 +146,9 @@ def build():
         shutil.rmtree(OUT)
     OUT.mkdir()
     shutil.copytree(STATIC, OUT / "static")
+    # file che devono stare nella radice del sito (verifiche Google ecc.)
+    for f in (OUT / "static").glob("google*.html"):
+        shutil.move(f, OUT / f.name)
 
     # --- commenti quotidiani ---
     # I commenti con data futura vengono generati (per avere le pagine pronte)
