@@ -31,6 +31,7 @@ CONTENT = ROOT / "content"
 STATIC = ROOT / "static"
 OUT = ROOT / "site"
 SITE_NAME = "Gnosis Vera"
+SITE_URL = "https://gnosisvera.it"
 TAGLINE = "La vera conoscenza del Vangelo: ogni giorno, con i Padri, i filosofi e i mistici"
 
 SECTIONS = {
@@ -66,8 +67,21 @@ def parse(path: Path) -> dict:
     return meta
 
 # ---------- template ----------
-def page(title, body, depth=0, description=""):
+def page(title, body, depth=0, description="", rel="", article=None, noindex=False):
     base = "../" * depth
+    canonical = f"{SITE_URL}/{rel}" if rel != "index.html" else f"{SITE_URL}/"
+    ld = ""
+    if article:
+        import json
+        ld = "<script type=\"application/ld+json\">" + json.dumps({
+            "@context": "https://schema.org", "@type": "Article",
+            "headline": article["title"], "description": description,
+            "datePublished": article.get("date", ""), "inLanguage": "it",
+            "author": {"@type": "Organization", "name": SITE_NAME},
+            "publisher": {"@type": "Organization", "name": SITE_NAME, "url": SITE_URL},
+            "mainEntityOfPage": canonical,
+        }, ensure_ascii=False) + "</script>"
+    robots = '<meta name="robots" content="noindex">' if noindex else ""
     nav = f"""
 <header class="top">
   <a class="brand" href="{base}index.html"><img src="{base}static/logo.svg" alt="" class="logo">{SITE_NAME}</a>
@@ -87,6 +101,16 @@ def page(title, body, depth=0, description=""):
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{html.escape(title)} · {SITE_NAME}</title>
 <meta name="description" content="{html.escape(description or TAGLINE)}">
+<link rel="canonical" href="{canonical}">
+<link rel="alternate" type="application/rss+xml" title="{SITE_NAME}" href="{SITE_URL}/feed.xml">
+<meta property="og:site_name" content="{SITE_NAME}">
+<meta property="og:type" content="{'article' if article else 'website'}">
+<meta property="og:title" content="{html.escape(title)}">
+<meta property="og:description" content="{html.escape(description or TAGLINE)}">
+<meta property="og:url" content="{canonical}">
+<meta property="og:locale" content="it_IT">
+{robots}
+{ld}
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap" rel="stylesheet">
 <link rel="icon" type="image/svg+xml" href="{base}static/favicon.svg">
@@ -98,7 +122,7 @@ def page(title, body, depth=0, description=""):
 {body}
 </main>
 <footer>
-  <p>{SITE_NAME} · {html.escape(TAGLINE)}</p>
+  <p>{SITE_NAME} · {html.escape(TAGLINE)} · <a href="{base}feed.xml">Feed RSS</a></p>
   <p class="small">I testi biblici sono citati o parafrasati per lo studio. Generato il {data_it(datetime.date.today(), False)}.</p>
 </footer>
 </body>
@@ -139,12 +163,12 @@ def build():
   {v['html']}
 </article>
 <p class="back"><a href="index.html">← Tutti i commenti</a></p>"""
-        write(f"vangelo/{v['slug']}.html", page(v["title"], body, 1, v.get("summary","")))
+        write(f"vangelo/{v['slug']}.html", page(v["title"], body, 1, v.get("summary",""), rel=f"vangelo/{v['slug']}.html", article=v, noindex=v["date_obj"] > oggi))
 
     cards = "\n".join(card(f"{v['slug']}.html", f"{data_it(v['date_obj'])} · {v.get('pericope','')}",
                            v["title"], v.get("summary","")) for v in vangeli)
     write("vangelo/index.html", page("Archivio dei commenti",
-          f"<h1>Il Vangelo giorno per giorno</h1><div class='grid'>{cards}</div>", 1))
+          f"<h1>Il Vangelo giorno per giorno</h1><div class='grid'>{cards}</div>", 1, rel="vangelo/index.html"))
 
     # --- studi ---
     all_studi = {}
@@ -159,10 +183,10 @@ def build():
   {s['html']}
 </article>
 <p class="back"><a href="index.html">← {html.escape(name)}</a></p>"""
-            write(f"studi/{key}/{s['slug']}.html", page(s["title"], body, 2, s.get("summary","")))
+            write(f"studi/{key}/{s['slug']}.html", page(s["title"], body, 2, s.get("summary",""), rel=f"studi/{key}/{s['slug']}.html", article=s))
         cards = "\n".join(card(f"{s['slug']}.html", name, s["title"], s.get("summary","")) for s in studi)
         write(f"studi/{key}/index.html", page(name,
-              f"<h1>{html.escape(name)}</h1><p class='lede'>{html.escape(desc)}</p><div class='grid'>{cards}</div>", 2, desc))
+              f"<h1>{html.escape(name)}</h1><p class='lede'>{html.escape(desc)}</p><div class='grid'>{cards}</div>", 2, desc, rel=f"studi/{key}/index.html"))
 
     # --- home: commento di oggi (o il più recente) + ultimi studi ---
     today = vangeli[0] if vangeli else None
@@ -185,13 +209,51 @@ def build():
                               v["title"], v.get("summary","")) for v in vangeli[1:4])
         home += f"<h2>Giorni precedenti</h2><div class='grid'>{prev}</div>"
     home += f"<h2>Studi</h2><div class='grid'>{''.join(recent)}</div>"
-    write("index.html", page("Oggi", home, 0))
+    write("index.html", page("Oggi", home, 0, rel="index.html"))
 
     # --- pagina del sito ---
     chi = (CONTENT / "chi-siamo.md")
     if chi.exists():
         c = parse(chi)
-        write("chi-siamo.html", page(c["title"], f"<article class='post'><h1>{html.escape(c['title'])}</h1>{c['html']}</article>", 0))
+        write("chi-siamo.html", page(c["title"], f"<article class='post'><h1>{html.escape(c['title'])}</h1>{c['html']}</article>", 0, rel="chi-siamo.html"))
+
+    # --- sitemap, robots, feed RSS ---
+    urls = [("", oggi), ("vangelo/index.html", oggi), ("chi-siamo.html", None)]
+    urls += [(f"vangelo/{v['slug']}.html", v["date_obj"]) for v in vangeli]
+    for key, studi in all_studi.items():
+        urls.append((f"studi/{key}/index.html", None))
+        urls += [(f"studi/{key}/{st['slug']}.html", st.get("date_obj")) for st in studi]
+    sm = ['<?xml version="1.0" encoding="UTF-8"?>', '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">']
+    for u, d in urls:
+        sm.append(f"  <url><loc>{SITE_URL}/{u}</loc>" + (f"<lastmod>{d.isoformat()}</lastmod>" if d else "") + "</url>")
+    sm.append("</urlset>")
+    write("sitemap.xml", "\n".join(sm))
+    write("robots.txt", f"User-agent: *\nAllow: /\nSitemap: {SITE_URL}/sitemap.xml\n")
+
+    import email.utils, time
+    def rfc(d): return email.utils.format_datetime(datetime.datetime(d.year, d.month, d.day, 5, 0, tzinfo=datetime.timezone.utc))
+    items = []
+    for v in vangeli[:30]:
+        items.append(f"""  <item>
+    <title>{html.escape(v['title'])} · {html.escape(v.get('pericope',''))}</title>
+    <link>{SITE_URL}/vangelo/{v['slug']}.html</link>
+    <guid>{SITE_URL}/vangelo/{v['slug']}.html</guid>
+    <pubDate>{rfc(v['date_obj'])}</pubDate>
+    <description>{html.escape(v.get('summary',''))}</description>
+    <content:encoded><![CDATA[{v['html']}]]></content:encoded>
+  </item>""")
+    feed = f"""<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+  <title>{SITE_NAME}</title>
+  <link>{SITE_URL}/</link>
+  <atom:link href="{SITE_URL}/feed.xml" rel="self" type="application/rss+xml"/>
+  <description>{html.escape(TAGLINE)}</description>
+  <language>it</language>
+{chr(10).join(items)}
+</channel>
+</rss>"""
+    write("feed.xml", feed)
 
     print(f"Generati {len(vangeli)} commenti e {sum(len(s) for s in all_studi.values())} studi in {OUT}")
 
