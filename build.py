@@ -149,6 +149,9 @@ def build():
     # file che devono stare nella radice del sito (verifiche Google ecc.)
     for f in (OUT / "static").glob("google*.html"):
         shutil.move(f, OUT / f.name)
+    # .htaccess (reindirizzamento www -> senza www)
+    if (OUT / "static" / "htaccess.txt").exists():
+        shutil.move(OUT / "static" / "htaccess.txt", OUT / ".htaccess")
 
     # --- commenti quotidiani ---
     # I commenti con data futura vengono generati (per avere le pagine pronte)
