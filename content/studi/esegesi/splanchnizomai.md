@@ -1,12 +1,12 @@
 ---
-title: Splanchnizomai. La compassione che viene dalle viscere
+title: Splanchnizomai (σπλαγχνίζομαι): significato della compassione nei Vangeli
 date: 2026-10-28
-summary: Il verbo greco con cui i Vangeli dicono la compassione di Gesù non parla di sentimenti ma di viscere. Un piccolo studio sulla parola più fisica del Nuovo Testamento.
+summary: Che cosa significa splanchnizomai (σπλαγχνίζομαι), il verbo greco della compassione di Gesù: non un sentimento ma le viscere. Dove compare nei Vangeli e perché conta.
 ---
 
 ## Un verbo quasi inventato
 
-Nei Vangeli, quando Gesù prova compassione, il verbo è *splanchnizomai* (σπλαγχνίζομαι). Nel greco classico praticamente non esiste con questo significato: *splanchna* sono le viscere, gli organi interni, e il verbo indicava il mangiare le interiora delle vittime sacrificali. Sono stati i traduttori ebrei della Settanta e poi gli evangelisti a farne il verbo della misericordia, perché avevano bisogno di una parola che rendesse l'ebraico *rachamim* — anch'essa plurale di *rechem*, l'utero. In entrambe le lingue la misericordia è un fatto d'organi, non di idee: è ciò che si sente nel ventre davanti a chi soffre, come una madre sente il figlio.
+Nei Vangeli, quando Gesù prova compassione, il verbo è *splanchnizomai* (σπλαγχνίζομαι), che nelle edizioni e nei lessici si trova anche scritto *splagchnizomai*: è la stessa parola, con due diverse traslitterazioni della lettera gamma davanti a chi. Nel greco classico praticamente non esiste con questo significato: *splanchna* sono le viscere, gli organi interni, e il verbo indicava il mangiare le interiora delle vittime sacrificali. Sono stati i traduttori ebrei della Settanta e poi gli evangelisti a farne il verbo della misericordia, perché avevano bisogno di una parola che rendesse l'ebraico *rachamim* — anch'essa plurale di *rechem*, l'utero. In entrambe le lingue la misericordia è un fatto d'organi, non di idee: è ciò che si sente nel ventre davanti a chi soffre, come una madre sente il figlio.
 
 ## Dove compare
 
