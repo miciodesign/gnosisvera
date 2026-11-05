@@ -1,7 +1,7 @@
 ---
-title: Metanoia. Perché "convertitevi" traduce male
+title: Metanoia (μετάνοια): significato di «convertitevi» nel Vangelo
 date: 2026-10-27
-summary: La prima parola della predicazione di Gesù, in greco, non parla di pentimento ma di un cambiamento della mente. Che cosa si perde nella traduzione e come recuperarlo.
+summary: Che cosa significa metanoia (μετάνοια), la prima parola della predicazione di Gesù: non pentimento ma cambiamento della mente. Perché «convertitevi» traduce male e come recuperare il senso del greco.
 ---
 
 ## La prima parola
