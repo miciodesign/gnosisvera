@@ -22,7 +22,7 @@ Una parola greca a settimana, il venerdì. Ogni studio: `content/studi/esegesi/<
 - [x] Metanoia (2026-10-27)
 - [x] Splanchnizomai (2026-10-28)
 - [x] Agape (2026-11-02)
-- [ ] Pistis (πίστις): fede, fiducia, fedeltà
+- [x] Pistis (2026-11-06) (πίστις): fede, fiducia, fedeltà
 - [ ] Logos (λόγος): Parola, ragione, discorso (prologo di Giovanni)
 - [ ] Kairos (καιρός): il tempo opportuno, diverso da chronos
 - [ ] Basileia (βασιλεία): regno, o meglio «regnare» di Dio
