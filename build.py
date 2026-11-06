@@ -40,6 +40,8 @@ SECTIONS = {
     "esegesi":   ("Esegesi e greco", "Il testo da vicino: parole chiave, contesto storico, struttura letteraria."),
 }
 
+LETTURE_CATEGORIE = ["Per cominciare", "Padri e filosofia", "Mistica"]
+
 MESI = ["gennaio","febbraio","marzo","aprile","maggio","giugno","luglio",
         "agosto","settembre","ottobre","novembre","dicembre"]
 GIORNI = ["lunedì","martedì","mercoledì","giovedì","venerdì","sabato","domenica"]
@@ -91,6 +93,7 @@ def page(title, body, depth=0, description="", rel="", article=None, noindex=Fal
     <a href="{base}studi/filosofia/index.html">Filosofia</a>
     <a href="{base}studi/mistica/index.html">Mistica</a>
     <a href="{base}studi/esegesi/index.html">Esegesi</a>
+    <a href="{base}letture/index.html">Letture</a>
     <a href="{base}chi-siamo.html">Il sito</a>
   </nav>
 </header>"""
@@ -217,6 +220,32 @@ def build():
     home += f"<h2>Studi</h2><div class='grid'>{''.join(recent)}</div>"
     write("index.html", page("Oggi", home, 0, rel="index.html"))
 
+    # --- letture consigliate (nostre schede, senza link di acquisto) ---
+    letture = sorted((parse(p) for p in (CONTENT / "letture").glob("*.md")),
+                     key=lambda m: int(m.get("ordine", 99))) if (CONTENT / "letture").exists() else []
+    for l in letture:
+        ed = f"<aside class='edizione'><strong>Edizione consigliata</strong><br>{html.escape(l.get('edizione',''))}</aside>" if l.get("edizione") else ""
+        body = f"""<article class="post">
+  <p class="kicker">Letture · {html.escape(l.get('categoria',''))}</p>
+  <h1>{html.escape(l['title'])}</h1>
+  <p class="pericope">{html.escape(l.get('autore',''))}</p>
+  {ed}
+  {l['html']}
+</article>
+<p class="back"><a href="index.html">← Tutte le letture</a></p>"""
+        write(f"letture/{l['slug']}.html", page(l["title"], body, 1, l.get("summary",""), rel=f"letture/{l['slug']}.html"))
+    if letture:
+        sezioni = ""
+        for cat in LETTURE_CATEGORIE:
+            cs = "\n".join(card(f"{l['slug']}.html", l.get("autore",""), l["title"], l.get("summary","")) for l in letture if l.get("categoria") == cat)
+            if cs:
+                sezioni += f"<h2>{html.escape(cat)}</h2><div class='grid'>{cs}</div>"
+        intro = ("<p class='lede'>Libri che leggiamo e consigliamo, con una scheda scritta da noi. "
+                 "Non ci sono link di acquisto né affiliazioni: l'indicazione dell'edizione serve solo a trovare il libro giusto. "
+                 "Se un giorno aggiungeremo link commerciali, lo dichiareremo qui.</p>")
+        write("letture/index.html", page("Letture consigliate", f"<h1>Letture</h1>{intro}{sezioni}", 1,
+              "Consigli di lettura con schede di recensione: Agostino, Clemente Alessandrino, Kierkegaard, Eckhart, Giovanni della Croce e il Nuovo Testamento in greco.", rel="letture/index.html"))
+
     # --- pagina del sito ---
     chi = (CONTENT / "chi-siamo.md")
     if chi.exists():
@@ -224,8 +253,9 @@ def build():
         write("chi-siamo.html", page(c["title"], f"<article class='post'><h1>{html.escape(c['title'])}</h1>{c['html']}</article>", 0, rel="chi-siamo.html"))
 
     # --- sitemap, robots, feed RSS ---
-    urls = [("", oggi), ("vangelo/index.html", oggi), ("chi-siamo.html", None)]
+    urls = [("", oggi), ("vangelo/index.html", oggi), ("chi-siamo.html", None), ("letture/index.html", None)]
     urls += [(f"vangelo/{v['slug']}.html", v["date_obj"]) for v in vangeli]
+    urls += [(f"letture/{l['slug']}.html", None) for l in letture]
     for key, studi in all_studi.items():
         urls.append((f"studi/{key}/index.html", None))
         urls += [(f"studi/{key}/{st['slug']}.html", st.get("date_obj")) for st in studi]

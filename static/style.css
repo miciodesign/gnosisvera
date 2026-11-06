@@ -107,3 +107,7 @@ footer p { margin: .2rem 0; }
   h1 { font-size: 1.9rem; }
   .post.featured { padding: 1.4rem 1.1rem; }
 }
+
+.edizione { background: var(--paper); border-left: 3px solid var(--accent); padding: .8rem 1rem; margin: 1rem 0 1.5rem; font-size: .92rem; color: var(--muted); }
+.edizione strong { color: var(--ink); }
+.lede + h2 { margin-top: 2rem; }
