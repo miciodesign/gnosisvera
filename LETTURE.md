@@ -13,7 +13,7 @@ Sezioni: Perché leggerlo · Per chi è · Come leggerlo · Il nostro giudizio. 
 - Libri con edizione italiana oggi reperibile.
 
 ## Candidati (verificare ogni volta)
-Pascal, *Pensieri* · Teresa d'Avila, *Castello interiore* · Gregorio di Nissa, *Vita di Mosè* · Pseudo-Dionigi, *Teologia mistica* · Detti dei Padri del deserto · Origene, *Omelie* · Tommaso d'Aquino (un'antologia) · Simone Weil, *Attesa di Dio* · Giovanni della Croce, *Salita del Monte Carmelo* · una grammatica o un lessico del greco del NT.
+Teresa d'Avila, *Castello interiore* · Gregorio di Nissa, *Vita di Mosè* · Pseudo-Dionigi, *Teologia mistica* · Detti dei Padri del deserto · Origene, *Omelie* · Tommaso d'Aquino (un'antologia) · Simone Weil, *Attesa di Dio* · Giovanni della Croce, *Salita del Monte Carmelo* · una grammatica o un lessico del greco del NT.
 
 ## Fatte
-Nuovo Testamento greco-latino-italiano · Agostino, Confessioni · Clemente, Stromati · Kierkegaard, Timore e tremore · Eckhart, Sermoni tedeschi · Giovanni della Croce, Notte oscura.
+Nuovo Testamento greco-latino-italiano · Agostino, Confessioni · Clemente, Stromati · Kierkegaard, Timore e tremore · Eckhart, Sermoni tedeschi · Giovanni della Croce, Notte oscura · Pascal, Pensieri.
