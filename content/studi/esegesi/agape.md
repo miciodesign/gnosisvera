@@ -54,3 +54,5 @@ Il verbo che abbiamo già incontrato, *splanchnizomai*, mostra il lato viscerale
 | *caritas* | (latino) | resa di *agape* nella Vulgata | 1 Cor 13 |
 
 Una curiosità: *erōs* non compare mai nel Nuovo Testamento. Non significa che l'amore umano sia escluso. Una spiegazione frequente è che la parola portasse con sé, nel mondo greco, troppo culto e troppo mito, e che i primi cristiani abbiano preferito una parola poco abitata, in cui mettere ciò che avevano visto; ma è un'ipotesi, non un dato.
+
+**Per approfondire.** Altre parole chiave: [splanchnizomai](splanchnizomai.html), la compassione; [metanoia](metanoia.html), il cambiare mente; [pistis](pistis.html), la fede. Sul legame tra amore e conoscenza: [Il vero gnostico](../filosofia/clemente-vero-gnostico.html).

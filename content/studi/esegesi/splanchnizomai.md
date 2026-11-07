@@ -35,3 +35,5 @@ Quando il verbo è rivolto ai discepoli, è sempre come comando implicito: *va' 
 | *eleos* | greco | pietà, grazia | la misericordia come atto (cfr. *Kyrie eleison*) |
 
 Si noti che il latino *misericordia* sposta la sede dal ventre al cuore, e l'italiano "compassione" la sposta ancora, verso il *patire-con*. Ogni traduzione sale di un gradino verso l'astratto; il greco dei Vangeli resta ostinatamente in basso.
+
+**Per approfondire.** Altre parole chiave dei Vangeli: [metanoia](metanoia.html), il cambiare mente; [agape](agape.html), l'amore; [pistis](pistis.html), la fede come fiducia.

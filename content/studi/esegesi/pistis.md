@@ -46,3 +46,5 @@ Ebrei 11,1 dice che la *pistis* è *elpizomenōn hypostasis, pragmatōn elenchos
 | *fides* | (latino) | resa nella Vulgata | Eb 11,1 |
 
 Una curiosità: l'aggettivo *pistos* in greco può voler dire sia "credente" sia "affidabile", e nel Nuovo Testamento lo si usa per Dio («fedele è Dio», 1 Corinzi 1,9) come per i credenti: la stessa parola descrive chi si fida e Colui di cui ci si fida.
+
+**Per approfondire.** Altre parole chiave: [metanoia](metanoia.html), il cambiare mente; [agape](agape.html), l'amore; [splanchnizomai](splanchnizomai.html), la compassione. Sul rapporto tra fede e conoscenza: [Credere per comprendere](../filosofia/credere-per-comprendere.html).

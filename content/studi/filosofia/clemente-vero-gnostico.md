@@ -33,3 +33,5 @@ Clemente ha anche un'immagine, e vale la pena ricordarla perché è la radice di
 Clemente non è nel calendario romano — fu tolto dal Martirologio nel 1586 per alcune espressioni giudicate incaute, mentre le Chiese orientali continuano a venerarlo. Ma il suo gesto resta esemplare: davanti a una parola corrotta non l'ha abbandonata, l'ha risanata. *Gnosis Vera* vorrebbe fare lo stesso con la lettura del Vangelo: nessun sapere riservato, nessun livello superiore, solo la fede di ogni giorno che cerca di capire ciò che ama. Il vero gnostico, direbbe Clemente, è chi apre il Vangelo del giorno senza sentirsi arrivato.
 
 > *La fede è il fondamento, la gnosi è l'edificio, la carità è il tetto.* È una parafrasi, ma Clemente avrebbe firmato.
+
+**Per approfondire.** Chi erano gli gnostici contro cui scriveva Clemente, e che cosa intendevano per «vangelo»: [Gli gnostici di Alessandria e i loro vangeli](gnostici-alessandrini-vangeli.html).

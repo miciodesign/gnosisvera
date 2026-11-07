@@ -1,10 +1,10 @@
 ---
-title: Metanoia (μετάνοια): significato di «convertitevi» nel Vangelo
+title: Metanoia e metanoeite (μετανοεῖτε): significato di «convertitevi» nel Vangelo
 date: 2026-10-27
-summary: Che cosa significa metanoia (μετάνοια), la prima parola della predicazione di Gesù: non pentimento ma cambiamento della mente. Perché «convertitevi» traduce male e come recuperare il senso del greco.
+summary: Metanoeite significa «cambiate mente», non «pentitevi»: ecco il significato di metanoia (μετάνοια), la prima parola della predicazione di Gesù. Perché «convertitevi» traduce male e come recuperare il senso del greco.
 ---
 
-## La prima parola
+## La prima parola: il significato di metanoeite
 
 Il Vangelo di Marco riassume così l'inizio della predicazione di Gesù: *il tempo è compiuto e il Regno di Dio è vicino; convertitevi e credete nel Vangelo* (Mc 1,15). Il verbo tradotto con "convertitevi" è *metanoeite* (μετανοεῖτε), imperativo di *metanoeō*. È composto da *meta*, "oltre, al di là, dopo", e *nous*, "mente, intelletto, modo di vedere". Alla lettera: *andate oltre la vostra mente*, *cambiate modo di pensare*.
 
@@ -40,3 +40,5 @@ Nessuna parola italiana rende tutto. "Cambiate mentalità" è esatto ma piatto; 
 | μεταμέλομαι | metamelomai | provare rimorso, dispiacersi | 3 (es. Giuda, Mt 27,3) |
 
 Si noti che di Giuda si dice *metamelētheis*, "preso dal rimorso", mai *metanoēsas*. Il rimorso non è la *metanoia*: può perfino esserne il contrario.
+
+**Per approfondire.** La stessa attenzione alle parole greche dei Vangeli: [splanchnizomai](splanchnizomai.html), la compassione che viene dalle viscere; [pistis](pistis.html), la fede come affidamento; [agape](agape.html), l'amore. Sul rapporto tra conoscere e cambiare vita, [Il vero gnostico](../filosofia/clemente-vero-gnostico.html).
