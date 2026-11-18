@@ -5,6 +5,7 @@ categoria: Padri e filosofia
 ordine: 3
 summary: Il libro da cui prende il nome questo sito. Clemente restituisce al Vangelo la parola «gnosi» e la lega alla carità.
 edizione: Edizioni Paoline, collana «Letture cristiane del primo millennio», introduzione di Marco Rizzi, traduzione di Giovanni Pini (2006). Per un'introduzione più breve: il Protrettico ai Greci, Città Nuova, a cura di F. Migliore (2004).
+isbn: 9788831531474
 ---
 
 ## Perché leggerlo

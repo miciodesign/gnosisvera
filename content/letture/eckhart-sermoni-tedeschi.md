@@ -5,6 +5,7 @@ categoria: Mistica
 ordine: 5
 summary: Le prediche in volgare del grande domenicano: il distacco, la nascita di Dio nell'anima, il fondo dell'anima.
 edizione: Adelphi, «Piccola Biblioteca Adelphi» n. 175, a cura di Marco Vannini (ISBN 978-88-459-0603-9, circa 280 pagine, brossura). Per una scelta più ampia con testi a fronte: Marco Vannini, 25 sermoni di Meister Eckhart (La Luce dell'anima, Lorenzo de' Medici Press, 2024).
+isbn: 9788845906039
 ---
 
 ## Perché leggerlo

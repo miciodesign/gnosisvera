@@ -5,6 +5,7 @@ categoria: Mistica
 ordine: 6
 summary: Un poema breve e il suo commento in prosa: il cammino dell'anima attraverso il buio verso l'unione con Dio.
 edizione: Edizioni Dehoniane Bologna, collana «Cammini dello spirito» (2011), circa 184 pagine. Per l'insieme dei testi: Opere complete, a cura di Luigi Borriello e Giovanna della Croce (collana «Classici del pensiero cristiano», 2024).
+isbn: 9788810507254
 ---
 
 ## Perché leggerlo

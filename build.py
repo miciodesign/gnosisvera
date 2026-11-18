@@ -30,6 +30,8 @@ ROOT = Path(__file__).parent
 CONTENT = ROOT / "content"
 STATIC = ROOT / "static"
 OUT = ROOT / "site"
+AMAZON_TAG = "gnosisvera-21"
+AMAZON_NOTA = "In qualità di Affiliato Amazon ricevo un guadagno dagli acquisti idonei."
 SITE_NAME = "Gnosis Vera"
 SITE_URL = "https://gnosisvera.it"
 TAGLINE = "La vera conoscenza del Vangelo: ogni giorno, con i Padri, i filosofi e i mistici"
@@ -126,6 +128,7 @@ def page(title, body, depth=0, description="", rel="", article=None, noindex=Fal
 </main>
 <footer>
   <p>{SITE_NAME} · {html.escape(TAGLINE)} · <a href="{base}feed.xml">Feed RSS</a></p>
+  <p class="small">{AMAZON_NOTA}</p>
   <p class="small">I testi biblici sono citati o parafrasati per lo studio. Generato il {data_it(datetime.date.today(), False)}.</p>
 </footer>
 </body>
@@ -225,12 +228,20 @@ def build():
                      key=lambda m: int(m.get("ordine", 99))) if (CONTENT / "letture").exists() else []
     for l in letture:
         ed = f"<aside class='edizione'><strong>Edizione consigliata</strong><br>{html.escape(l.get('edizione',''))}</aside>" if l.get("edizione") else ""
+        q = l.get("isbn") or l.get("cerca")
+        acq = ""
+        if q:
+            from urllib.parse import quote_plus
+            url = f"https://www.amazon.it/s?k={quote_plus(q)}&tag={AMAZON_TAG}"
+            acq = (f"<aside class='edizione'><a href='{url}' rel='sponsored nofollow noopener' target='_blank'>Cerca questo libro su Amazon.it</a><br>"
+                   f"<span class='small'>Link di affiliazione. {AMAZON_NOTA} Il prezzo per te non cambia e il nostro giudizio non dipende da questo.</span></aside>")
         body = f"""<article class="post">
   <p class="kicker">Letture · {html.escape(l.get('categoria',''))}</p>
   <h1>{html.escape(l['title'])}</h1>
   <p class="pericope">{html.escape(l.get('autore',''))}</p>
   {ed}
   {l['html']}
+  {acq}
 </article>
 <p class="back"><a href="index.html">← Tutte le letture</a></p>"""
         write(f"letture/{l['slug']}.html", page(l["title"], body, 1, l.get("summary",""), rel=f"letture/{l['slug']}.html"))
@@ -241,8 +252,9 @@ def build():
             if cs:
                 sezioni += f"<h2>{html.escape(cat)}</h2><div class='grid'>{cs}</div>"
         intro = ("<p class='lede'>Libri che leggiamo e consigliamo, con una scheda scritta da noi. "
-                 "Non ci sono link di acquisto né affiliazioni: l'indicazione dell'edizione serve solo a trovare il libro giusto. "
-                 "Se un giorno aggiungeremo link commerciali, lo dichiareremo qui.</p>")
+                 "Le schede sono scritte da noi e i giudizi non dipendono da chi vende i libri. "
+                 "Alcune schede contengono un link di ricerca su Amazon.it: è un link di affiliazione, che a te non costa nulla e a noi lascia una piccola commissione. "
+                 + AMAZON_NOTA + "</p>")
         write("letture/index.html", page("Letture consigliate", f"<h1>Letture</h1>{intro}{sezioni}", 1,
               "Consigli di lettura con schede di recensione: Agostino, Clemente Alessandrino, Kierkegaard, Eckhart, Giovanni della Croce e il Nuovo Testamento in greco.", rel="letture/index.html"))
 

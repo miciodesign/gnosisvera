@@ -5,6 +5,7 @@ categoria: Padri e filosofia
 ordine: 4
 summary: Abramo e il sacrificio di Isacco letti da un filosofo che non accetta una fede comoda. Un libro breve e scomodo.
 edizione: SE, collana «Conoscenza religiosa», traduzione di Franco Fortini (2024). In circolazione anche Mondadori, Oscar classici (2016) e Morcelliana con introduzione di Dario Borso: controllate chi traduce prima di scegliere.
+isbn: 9788867238934
 ---
 
 ## Perché leggerlo

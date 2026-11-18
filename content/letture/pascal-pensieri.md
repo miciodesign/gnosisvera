@@ -5,6 +5,7 @@ categoria: Padri e filosofia
 ordine: 7
 summary: Frammenti di un'apologia mai finita: l'uomo tra miseria e grandezza, la ragione e i suoi limiti, la scommessa sulla fede.
 edizione: Città Nuova, collana «Minima» (2013), a cura di Philippe Sellier e Bernard Papasogli, sul testo critico delle *Pensées* curato da Sellier (2003). Esiste anche un'edizione Mondadori, «Oscar classici», collana «Sophia» (2025).
+cerca: Pascal Pensieri Città Nuova Sellier Papasogli
 ---
 
 ## Perché leggerlo

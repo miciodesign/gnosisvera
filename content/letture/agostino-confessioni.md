@@ -5,6 +5,7 @@ categoria: Padri e filosofia
 ordine: 2
 summary: La storia di un uomo che cerca la verità e la trova dentro di sé e oltre sé. Il libro da cui parte gran parte della filosofia cristiana d'Occidente.
 edizione: Fondazione Lorenzo Valla / Mondadori, 5 volumi (1992–1997), testo latino a fronte con introduzioni e commento. Esistono anche edizioni economiche in un solo volume di altri editori: sceglietene una con testo a fronte e note.
+cerca: Agostino Confessioni Fondazione Lorenzo Valla
 ---
 
 ## Perché leggerlo

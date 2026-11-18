@@ -2,14 +2,14 @@
 
 Cartella: `content/letture/<slug>.md`. Copiare il formato di una scheda esistente (es. `eckhart-sermoni-tedeschi.md`).
 
-Frontmatter: `title`, `autore`, `categoria` (una tra: Per cominciare, Padri e filosofia, Mistica — per una nuova categoria aggiungerla a `LETTURE_CATEGORIE` in build.py), `ordine` (numero successivo all'ultimo), `summary` (una frase), `edizione`.
+Frontmatter: `title`, `autore`, `categoria` (una tra: Per cominciare, Padri e filosofia, Mistica — per una nuova categoria aggiungerla a `LETTURE_CATEGORIE` in build.py), `ordine` (numero successivo all'ultimo), `summary` (una frase), `edizione`, e `isbn` o `cerca`.
 
 Sezioni: Perché leggerlo · Per chi è · Come leggerlo · Il nostro giudizio. Circa 250–350 parole. Link ai nostri studi collegati con percorso relativo (`../studi/...`).
 
 ## Regole di verità
 - Prima di scrivere, VERIFICARE con ricerca web editore, collana, anno, curatore/traduttore dell'edizione italiana. Ciò che non si verifica si omette (niente traduttori o ISBN a memoria).
 - Nessuna citazione dal libro, nessun numero di pagina del testo, nessuna copertina.
-- Nessun link di acquisto né affiliazione. Il giudizio è dichiaratamente nostro, onesto (dire anche i limiti del libro).
+- Link Amazon: aggiungere nel frontmatter `isbn:` (solo se verificato) oppure `cerca:` (titolo e autore); build.py genera il link di affiliazione (tag gnosisvera-21) e la dichiarazione. Non scrivere link a mano e non cambiare il tono per vendere: il giudizio resta onesto (dire anche i limiti del libro).
 - Libri con edizione italiana oggi reperibile.
 
 ## Candidati (verificare ogni volta)

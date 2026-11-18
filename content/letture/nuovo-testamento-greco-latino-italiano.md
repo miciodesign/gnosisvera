@@ -5,6 +5,7 @@ categoria: Per cominciare
 ordine: 1
 summary: Il testo greco del Nuovo Testamento con latino e italiano a fronte: lo strumento di base per chi vuole leggere il Vangelo da vicino.
 edizione: Libreria Editrice Vaticana, 2020 (CEI), 1854 pagine, ISBN 978-88-944997-4-2.
+isbn: 9788894499742
 ---
 
 ## Perché leggerlo
