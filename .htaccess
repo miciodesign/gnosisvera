@@ -1,0 +1,4 @@
+# Un solo indirizzo per il sito: www.gnosisvera.it -> gnosisvera.it (redirect permanente)
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^www\.gnosisvera\.it$ [NC]
+RewriteRule ^(.*)$ https://gnosisvera.it/$1 [L,R=301]
