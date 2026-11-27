@@ -25,7 +25,7 @@ Una parola greca a settimana, il venerdì. Ogni studio: `content/studi/esegesi/<
 - [x] Pistis (2026-11-06) (πίστις): fede, fiducia, fedeltà
 - [x] Logos (2026-11-13) (λόγος): Parola, ragione, discorso (prologo di Giovanni)
 - [x] Kairos (2026-11-20) (καιρός): il tempo opportuno, diverso da chronos
-- [ ] Basileia (βασιλεία): regno, o meglio «regnare» di Dio
+- [x] Basileia (2026-11-27) (βασιλεία): regno, o meglio «regnare» di Dio
 - [ ] Charis (χάρις): grazia, dono, gratitudine
 - [ ] Makarios (μακάριος): «beato» nelle beatitudini, perché non è «felice»
 - [ ] Ekklesia (ἐκκλησία): chiesa come convocazione
