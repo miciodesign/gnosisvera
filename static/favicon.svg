@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120">
+  <!-- Gnosis Vera · marchio B: la mandorla e la fiamma (l'occhio del cuore) -->
+  <path d="M60 14 C 90 36, 90 84, 60 106 C 30 84, 30 36, 60 14 Z"
+        fill="none" stroke="#2b2620" stroke-width="2.4" stroke-linejoin="round"/>
+  <!-- fiamma -->
+  <path d="M60 42 C 70 54, 72 62, 66 70 C 64 73, 60 75, 60 80 C 60 75, 56 73, 54 70 C 48 62, 50 54, 60 42 Z"
+        fill="#8a3b2a"/>
+  <path d="M60 58 C 64 63, 64 68, 60 72 C 56 68, 56 63, 60 58 Z" fill="#b8923a"/>
+</svg>
